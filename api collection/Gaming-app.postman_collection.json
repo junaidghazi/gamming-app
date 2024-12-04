@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "701dc016-0d19-4123-abac-3dd23242793a",
+		"name": "Gaming-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26013354",
+		"_collection_link": "https://universal-star-644105.postman.co/workspace/my-new-work-space~2a13371a-122c-4355-b80c-197fa682d4c9/collection/26013354-701dc016-0d19-4123-abac-3dd23242793a?action=share&source=collection_link&creator=26013354"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"junaid\",\r\n    \"lastName\": \"gazzi\",\r\n    \"email\": \"junaid@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/register/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"junaid@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Go to Home Page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/auth/index",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Users Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/auth/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Tornament",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"gazi club\",\r\n  \"startDate\": \"2024-07-02T00:00:00\",\r\n  \"endDate\": \"2024-07-02T00:00:00\",\r\n  \"type\": \"League\",\r\n  \"status\": \"Active\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tournaments/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tournaments",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Tournaments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tournaments/allTournaments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tournaments",
+						"allTournaments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Tournament Details by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tournaments/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tournaments",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prize Distribute",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"team\": {\r\n    \"id\": 1,\r\n    \"name\": \"Team B\"\r\n  },\r\n  \"prizeAmount\": 5000\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/prizes/distribute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prizes",
+						"distribute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Teams",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"matchId\": 1,\r\n  \"team1\": {\r\n    \"id\": 1,\r\n    \"name\": \"Team A\",\r\n    \"points\": 3,\r\n    \"goalsScored\": 2,\r\n    \"goalsConceded\": 1,\r\n    \"goalDifference\": 1\r\n  },\r\n  \"team2\": {\r\n    \"id\": 2,\r\n    \"name\": \"Team B\",\r\n    \"points\": 0,\r\n    \"goalsScored\": 1,\r\n    \"goalsConceded\": 2,\r\n    \"goalDifference\": -1\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/league/updateStandings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"league",
+						"updateStandings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Teams standing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/league/standings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"league",
+						"standings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get match details by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/matches/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"matches",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update the match result",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/matches/1/result?team1Score=3&team2Score=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"matches",
+						"1",
+						"result"
+					],
+					"query": [
+						{
+							"key": "team1Score",
+							"value": "3"
+						},
+						{
+							"key": "team2Score",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

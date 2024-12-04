@@ -12,12 +12,12 @@ public class TournamentController {
     @Autowired
     private TournamentService tournamentService;
 
-    @PostMapping
+    @PostMapping("/create")
     public Tournament createTournament(@RequestBody Tournament tournament) {
         return tournamentService.createTournament(tournament);
     }
 
-    @GetMapping
+    @GetMapping("/allTournaments")
     public Iterable<Tournament> getAllTournaments() {
         return tournamentService.getAllTournaments();
     }
