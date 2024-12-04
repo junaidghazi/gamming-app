@@ -14,8 +14,8 @@ public class Tournament {
     private String name;
     private Date startDate;
     private Date endDate;
-    private String type; // e.g., "League" or "Knockout"
-    private String status; // e.g., "Active", "Inactive"
+    private String type; // "League" or "Knockout"
+    private String status; // "Active", "Inactive"
 
     // Getters and setters
     public Long getId() {
